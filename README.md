@@ -9,7 +9,7 @@ Special thanks to [Carten](https://www.kaggle.com/tencars/392-crypto-currency-pa
 This is a study made by a student in free time, nothing in this study is financial advice.
 
 
-# The study
+## The study
 
 The purpose of this study is to predict the Cryptocurrency market Trend, we toke as example ETH and BTC but it can be used with all coins.
 

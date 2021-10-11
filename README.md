@@ -4,7 +4,7 @@ In this repository we'll study the crypto market trying to predict the Trend Inv
 
 Special thanks to [Carten](https://www.kaggle.com/tencars/392-crypto-currency-pairs-at-minute-resolution/version/948?select=etheur.csv) for the data collection.
 
-### Disclaimer
+**Disclaimer:**
 
 This is a study made by a student in free time, nothing in this study should be considered as financial advice.
 

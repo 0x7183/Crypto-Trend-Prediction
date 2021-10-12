@@ -81,3 +81,5 @@ As you can see the prediction and profit aren't great.
 
 Don't use this model in real life investments, because they won't work.
 If you want to help with this project feel free to contact me.
+
+#test

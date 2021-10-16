@@ -38,21 +38,26 @@ Some timeframe can be full of filled value, in that case we just set the trend t
 
 We used the Trend column for identifying the Trend Inversion Point and set the label column, 1 for buy signal, -1 for sell signal, 0 otherwise.
 
-Then we calculated the Exponential Moving Average of open column and volume column and add them to our dataframe.
+Then we calculated some Indicators and add them to our dataframe.
 
 In the end we removed close, high, low and trend columns.
 
 
 After all our dataframe looks like this:
 
-| time          | open          | ema            | ema_volume    | volume        | label        |
-| ------------- |:-------------:| :-------------:|:-------------:|:-------------:|-------------:| 
-| 149518190000  | 2304.600000   | 2301.977373    | 4.259261      |  0.229582     | 0.0          |
+| time          | open          | macd           | macds         | rsi_12        | max_high     | min_low       | label  |
+| ------------- |:-------------:| :-------------:|:-------------:|:-------------:|:------------:|:-------------:|-------:| 
+| 149518190000  | 2304.600000   | -0.006397      | -0.009366     |  0.229582     | 1828.183508  | 1793.527485   | 0.0.   |
+
+
+
+
+
 
 
 ## Training and Validation
 
-First we removed 3 random samples from our entire dataframe, we will use them for profit validation.
+First we removed 3 30 days random samples from our entire dataframe, we will use them for profit validation.
 
 After that we splitted the data in X_test, y_test, X_training, y_training .
 
@@ -63,23 +68,21 @@ We used under sampling to avoid that phenomenon.
 
 Now we can finally train our models, and evaluate them:
 
-* Neural Network, Balanced Accuracy score: 0.43516934942417995
-* Decision Tree, Balanced Accuracy score: 0.42751684593313616
-* Random Forest, Balanced Accuracy score: 0.4860863078404989
+* Random Forest Balanced Accuracy: 0.7294651491325616
+* Decision Tree Balanced Accuracy: 0.680913137946446
+* Neural Network balanced accuracy 0.4071340560574852
 
 
-In the end we evaluated the profit of this prediction in the 3 random samples that we removed first:
+In the end we evaluated the profit of this prediction in the 3 random samples and compared it with a Baseline Algorithm that buy totaly random and sell if the profit is greater then 3%.
 
+None of the models performed better then the baseline, nor for the profit nor for the average holding time.
 
-* Neural Network: TOTAL PROFIT: 0.0
-* Decision Tree: TOTAL PROFIT: 0.0
-* Random forest: TOTAL PROFIT: 1.066484582450327
+The average profit is high, but that's just because of the Crypto Market.
 
-As you can see the prediction and profit aren't great.
+If nothing is wrong then this means none of our model are currenty work.
 
 ## Conclusion
 
 Don't use this model in real life investments, because they won't work.
 If you want to help with this project feel free to contact me.
 
-#test

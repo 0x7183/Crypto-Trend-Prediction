@@ -1,15 +1,17 @@
 # Crypto-Trend-Prediction
 
-In this repository we'll study the crypto market trying to predict the Trend Inversion Point.
+In this repository we'll study the crypto market trying to predict it.
 
-Special thanks to [Carten](https://www.kaggle.com/tencars/392-crypto-currency-pairs-at-minute-resolution/version/948?select=etheur.csv) for the data collection.
+We developed two strategy: the first based on AI models and the second based on Rsi and Macd indicators.
+
+Special thanks to [Carsten](https://www.kaggle.com/tencars/392-crypto-currency-pairs-at-minute-resolution/version/948?select=etheur.csv) for the data collection.
 
 **Disclaimer:**
 
-This is a study made by a student in free time, nothing in this study should be considered as financial advice.
+This is a study made by a student in free time, nothing in this study should be considered as financial advice. 
+Invest at your own risk!
 
-
-## The study
+## Trend Inversion Point Study
 
 The purpose of this study is to predict the Cryptocurrency market Trend, we took as example ETH and BTC but it can be used with all coins.
 
@@ -52,10 +54,7 @@ After all our dataframe looks like this:
 
 
 
-
-
-
-## Training and Validation
+### Training and Validation
 
 First we removed 3 30 days random samples from our entire dataframe, we will use them for profit validation.
 
@@ -81,8 +80,14 @@ The average profit is high, but that's just because of the Crypto Market.
 
 If nothing is wrong then this means none of our model are currenty work.
 
-## Conclusion
+### Conclusion
 
-Don't use this model in real life investments, because they won't work.
+Don't use this models in real life investments, because they won't work.
 If you want to help with this project feel free to contact me.
 
+
+
+## Macd Rsi Indicators
+
+In this section we'll try to study a trading strategy based on indicators and how much we can earn using it.
+We'll compare it with an holding strategy and a random strategy, the code is well commented, then just look at it for more info.
